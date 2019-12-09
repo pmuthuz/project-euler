@@ -1,0 +1,12 @@
+last = 2
+previous = 1
+sum = 0
+while last < 4000000
+  sum = sum + last if last % 2 == 0
+  temp = last
+  last = last + previous
+  previous = temp
+end
+puts sum
+
+__END__
