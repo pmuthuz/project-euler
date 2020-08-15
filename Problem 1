@@ -1,1 +1,12 @@
+#https://projecteuler.net/problem=1
+#one liner
 puts (1..999).inject(0){ |sum, n| ( ( n % 3 == 0) || ( n % 5 == 0 ) ) ? sum + n : sum }
+
+#O(1)
+n5 = 999 / 5
+n3 = 999 / 3
+n15 = 999 /15
+n5sum =  n5 * (n5 + 1) / 2 # sum of 5 * (1 + 2 + 3 ...199) n * (n+1) / 2
+n3sum =  n3 * (n3 + 1) / 2 # sum of 3 * (1 + 2 + 3 ...333)
+n15sum = n15 * (n15 + 1) / 2 #sum of 15 * (1 + 2 + 3 ...66)  
+puts 5 * n5sum + 3 * n3sum - 15 * n15sum
